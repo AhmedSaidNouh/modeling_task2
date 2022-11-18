@@ -194,10 +194,6 @@ namespace NewspaperSellerModels
 
             }
 
-            foreach (SimulationCase Scase in SimulationTable)
-            {
-               Console.WriteLine(Scase.DayNo.ToString() + ' ' + Scase.RandomNewsDayType.ToString() + ' ' + Scase.NewsDayType.ToString() + ' ' + Scase.RandomDemand.ToString() + ' ' + Scase.Demand.ToString() + ' ' + Scase.DailyCost.ToString() + ' ' + Scase.SalesProfit.ToString() + ' ' + Scase.LostProfit.ToString() + ' ' + Scase.ScrapProfit.ToString() + ' ' + Scase.DailyNetProfit.ToString());
-            }
         }
 
 
@@ -234,13 +230,6 @@ namespace NewspaperSellerModels
             PerformanceMeasures.TotalNetProfit = Net_Profit;
             PerformanceMeasures.DaysWithMoreDemand =  Number_of_days_having_excess_demand;
             PerformanceMeasures.DaysWithUnsoldPapers = Number_of_days_having_unsold_papers;
-            //Console.WriteLine("TotalSalesProfit :" + Total_Sales_Revenue);
-            //Console.WriteLine("TotalCost :" + Total_Cost_of_Newspapers);
-            //Console.WriteLine("TotalLostProfit :" + Total_Lost_Profit_from_Excess_Demand);
-            //Console.WriteLine("TotalScrapProfit :" + Total_Salvage_from_sale_of_Scrap_papers);
-            //Console.WriteLine("TotalNetProfit :" + Net_Profit);
-            //Console.WriteLine("DaysWithMoreDemand :" + Number_of_days_having_excess_demand);
-            //Console.WriteLine("DaysWithUnsoldPapers :" + Number_of_days_having_unsold_papers);
         }
         ///////////// INPUTS /////////////
         public int NumOfNewspapers { get; set; }

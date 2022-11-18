@@ -14,22 +14,14 @@ namespace NewspaperSellerSimulation
         /// </summary>
         [STAThread]
         static void Main()
-        { 
+        {
+            string path = "../../TestCases/";
+            string test = "TestCase2.txt";
+            string final_path = path + test;
             NewspaperSellerModels.SimulationSystem simulation = new NewspaperSellerModels.SimulationSystem();
-            simulation.readFromFile("../../TestCases/TestCase3.txt", simulation);
-            //foreach (NewspaperSellerModels.DemandDistribution s in simulation.DemandDistributions)
-            //{
-                
-            //    Console.Write(s.Demand);
-            //    Console.Write("_");
-            //    Console.Write(s.Demand);
-            //    Console.Write("_");
-            //    Console.Write(s.Demand);
-            //    Console.WriteLine();
-            //}
-            simulation.calculateSimulationTable();
-            simulation.calulate_proformance();
-            string x = TestingManager.Test(simulation, Constants.FileNames.TestCase3);
+            simulation.readFromFile(final_path, simulation);
+            
+            string x = TestingManager.Test(simulation, Constants.FileNames.TestCase2);
             MessageBox.Show(x);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
