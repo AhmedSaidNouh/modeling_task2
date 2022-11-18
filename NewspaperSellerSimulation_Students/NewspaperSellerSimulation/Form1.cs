@@ -16,7 +16,6 @@ namespace NewspaperSellerSimulation
     {
         public Form1()
         {
-            
             InitializeComponent();
             
         }

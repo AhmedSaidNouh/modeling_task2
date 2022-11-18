@@ -124,3 +124,15 @@ D:\computer scince\الكلية\الفرقه الرابعة\الترم الاو�
 D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.CopyComplete
 D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.exe
 D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.pdb
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.exe.config
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.exe
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.pdb
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\bin\Debug\NewspaperSellerModels.dll
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\bin\Debug\NewspaperSellerModels.pdb
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.AssemblyReference.cache
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.Properties.Resources.resources
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.GenerateResource.cache
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.CoreCompileInputs.cache
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.CopyComplete
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.exe
+D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.pdb

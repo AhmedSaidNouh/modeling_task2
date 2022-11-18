@@ -37,7 +37,7 @@ namespace NewspaperSellerModels
                 {
                     PurchasePrice=decimal.Parse(reader.ReadLine());
                 }
-                else if (lineRead == "SellingPriceScrapPrice")
+                else if (lineRead == "SellingPrice")
                 {
                     SellingPrice = decimal.Parse(reader.ReadLine());
                 }
@@ -110,6 +110,8 @@ namespace NewspaperSellerModels
                     }
                     calculateCummProb_DemandDistributions();
                 }
+                //test randoms
+
             }
             fileStream.Close();
         }
@@ -145,6 +147,54 @@ namespace NewspaperSellerModels
                     }
                         
                 }
+            }
+        }
+        public void calculateSimulationTable()
+        {
+            Random rd = new Random();
+            var randForDemands = new List<int>();
+            var randForDays = new List<int>();
+            for (int i = 0; i < NumOfRecords; i++) {
+                randForDemands.Add(rd.Next(1, 100));
+                randForDays.Add(rd.Next(1, 100));
+            }
+            SimulationCase raw = new SimulationCase();
+            for (int i = 0; i < NumOfRecords; i++) {
+                raw = new SimulationCase();
+                raw.DayNo = i + 1;
+                raw.RandomNewsDayType = randForDays[i];
+                var day = DayTypeDistributions.Find(x => (randForDays[i] <= x.MaxRange) && (randForDays[i] >= x.MinRange));
+                raw.NewsDayType = day.DayType;
+                raw.RandomDemand = randForDemands[i];
+                var Demand = 0;
+                var index = 0;
+                if (day.DayType == Enums.DayType.Good) index = 0;
+                if (day.DayType == Enums.DayType.Fair) index = 1;
+                if (day.DayType == Enums.DayType.Poor) index = 2;
+                foreach (DemandDistribution Row in DemandDistributions)
+                {
+                    if((randForDemands[i] >= Row.DayTypeDistributions[index].MinRange)&&(randForDemands[i] <= Row.DayTypeDistributions[index].MaxRange))
+                    {
+                        Demand = Row.Demand;
+                        break;
+                    }
+                }
+                raw.Demand = Demand;
+                raw.DailyCost = NumOfNewspapers * PurchasePrice;
+                raw.SalesProfit = Demand * SellingPrice;
+                raw.LostProfit = (raw.Demand - NumOfNewspapers) * (SellingPrice-PurchasePrice);
+                if (raw.LostProfit <= 0) raw.LostProfit = 0;
+                raw.ScrapProfit = (NumOfNewspapers - raw.Demand) * ScrapPrice;
+                if (raw.ScrapProfit <= 0) raw.ScrapProfit = 0;
+                raw.DailyNetProfit = raw.SalesProfit - raw.DailyCost - raw.LostProfit + raw.ScrapProfit;
+                SimulationTable.Add(raw);
+                //DemandDistribution demand = DemandDistributions.Find(x => (x.DayTypeDistributions.Find(z => (z.DayType.Equals( raw.NewsDayType)) &&(randForDemands[i]>=z.MinRange) && (randForDemands[i]<=z.MaxRange))));
+                //raw.Demand;
+            }
+
+            foreach(SimulationCase Scase in SimulationTable)
+            {
+                Console.WriteLine(Scase.DayNo.ToString() + ' ' + Scase.RandomNewsDayType.ToString() + ' ' + Scase.NewsDayType.ToString() + ' ' + Scase.RandomDemand.ToString() + ' ' + Scase.Demand.ToString() + ' ' +Scase.DailyCost.ToString() + ' '+Scase.SalesProfit.ToString() + ' '+Scase.LostProfit.ToString() + ' '+ Scase.ScrapProfit.ToString() + ' '+Scase.DailyNetProfit.ToString());
             }
         }
         ///////////// INPUTS /////////////
