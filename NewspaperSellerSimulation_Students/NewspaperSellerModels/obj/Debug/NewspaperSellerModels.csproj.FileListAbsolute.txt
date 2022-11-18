@@ -42,3 +42,9 @@ D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\Newspap
 D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.csproj.CoreCompileInputs.cache
 D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.dll
 D:\faculty 4th yrear 1st term\Modeling and smulation\Labs\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.pdb
+D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\modeling_task2\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\bin\Debug\NewspaperSellerModels.dll
+D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\modeling_task2\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\bin\Debug\NewspaperSellerModels.pdb
+D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\modeling_task2\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.csproj.AssemblyReference.cache
+D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\modeling_task2\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.csproj.CoreCompileInputs.cache
+D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\modeling_task2\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.dll
+D:\computer scince\الكلية\الفرقه الرابعة\الترم الاول\sumolation\task 2\modeling_task2\modeling_task2\NewspaperSellerSimulation_Students\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.pdb

@@ -191,10 +191,10 @@ namespace NewspaperSellerModels
 
             }
 
-            //foreach (SimulationCase Scase in SimulationTable)
-            //{
-            //    Console.WriteLine(Scase.DayNo.ToString() + ' ' + Scase.RandomNewsDayType.ToString() + ' ' + Scase.NewsDayType.ToString() + ' ' + Scase.RandomDemand.ToString() + ' ' + Scase.Demand.ToString() + ' ' + Scase.DailyCost.ToString() + ' ' + Scase.SalesProfit.ToString() + ' ' + Scase.LostProfit.ToString() + ' ' + Scase.ScrapProfit.ToString() + ' ' + Scase.DailyNetProfit.ToString());
-            //}
+            foreach (SimulationCase Scase in SimulationTable)
+            {
+               Console.WriteLine(Scase.DayNo.ToString() + ' ' + Scase.RandomNewsDayType.ToString() + ' ' + Scase.NewsDayType.ToString() + ' ' + Scase.RandomDemand.ToString() + ' ' + Scase.Demand.ToString() + ' ' + Scase.DailyCost.ToString() + ' ' + Scase.SalesProfit.ToString() + ' ' + Scase.LostProfit.ToString() + ' ' + Scase.ScrapProfit.ToString() + ' ' + Scase.DailyNetProfit.ToString());
+            }
         }
 
 
