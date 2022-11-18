@@ -108,7 +108,7 @@ namespace NewspaperSellerModels
 
                         DemandDistributions.Add(Raw);
                     }
-
+                    calculateCummProb_DemandDistributions();
                 }
             }
             fileStream.Close();
@@ -123,6 +123,28 @@ namespace NewspaperSellerModels
                 sumCProb += Row.Probability;
                 Row.CummProbability = sumCProb;
                 Row.MaxRange = (int)(sumCProb * 100);
+            }
+        }
+        //Calculate Cumulative Probability DayTypeDistributions
+        public void calculateCummProb_DemandDistributions()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                decimal sumCProb = 0;
+                foreach (DemandDistribution Row in DemandDistributions)
+                {
+              
+                    Row.DayTypeDistributions[i].MinRange = (int)(sumCProb * 100) + 1;
+                    sumCProb += Row.DayTypeDistributions[i].Probability;
+                    Row.DayTypeDistributions[i].CummProbability = sumCProb;
+                    Row.DayTypeDistributions[i].MaxRange = (int)(sumCProb * 100);
+                    if (Row.DayTypeDistributions[i].MinRange > 100)
+                    {
+                        Row.DayTypeDistributions[i].MaxRange = 0;
+                        Row.DayTypeDistributions[i].MinRange = 0;
+                    }
+                        
+                }
             }
         }
         ///////////// INPUTS /////////////

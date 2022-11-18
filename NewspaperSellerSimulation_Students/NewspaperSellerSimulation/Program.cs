@@ -17,10 +17,15 @@ namespace NewspaperSellerSimulation
         { 
             NewspaperSellerModels.SimulationSystem simulation = new NewspaperSellerModels.SimulationSystem();
             simulation.readFromFile("D:/TestCase1.txt", simulation);
-            foreach(NewspaperSellerModels.DemandDistribution s in simulation.DemandDistributions)
+            foreach (NewspaperSellerModels.DemandDistribution s in simulation.DemandDistributions)
             {
-                Console.WriteLine(s.Demand);
-               
+                Console.Write(s.DayTypeDistributions[0].Probability);
+                Console.Write("_");
+                Console.Write(s.DayTypeDistributions[1].Probability);
+                Console.Write("_");
+                Console.Write(s.DayTypeDistributions[2].Probability);
+                Console.WriteLine();
+
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
