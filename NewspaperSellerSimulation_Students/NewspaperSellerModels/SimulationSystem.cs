@@ -188,14 +188,56 @@ namespace NewspaperSellerModels
                 if (raw.ScrapProfit <= 0) raw.ScrapProfit = 0;
                 raw.DailyNetProfit = raw.SalesProfit - raw.DailyCost - raw.LostProfit + raw.ScrapProfit;
                 SimulationTable.Add(raw);
-                //DemandDistribution demand = DemandDistributions.Find(x => (x.DayTypeDistributions.Find(z => (z.DayType.Equals( raw.NewsDayType)) &&(randForDemands[i]>=z.MinRange) && (randForDemands[i]<=z.MaxRange))));
-                //raw.Demand;
+
             }
 
-            foreach(SimulationCase Scase in SimulationTable)
+            //foreach (SimulationCase Scase in SimulationTable)
+            //{
+            //    Console.WriteLine(Scase.DayNo.ToString() + ' ' + Scase.RandomNewsDayType.ToString() + ' ' + Scase.NewsDayType.ToString() + ' ' + Scase.RandomDemand.ToString() + ' ' + Scase.Demand.ToString() + ' ' + Scase.DailyCost.ToString() + ' ' + Scase.SalesProfit.ToString() + ' ' + Scase.LostProfit.ToString() + ' ' + Scase.ScrapProfit.ToString() + ' ' + Scase.DailyNetProfit.ToString());
+            //}
+        }
+
+
+        public void calulate_proformance()
+        {
+            decimal Total_Sales_Revenue = 0;
+            decimal Total_Cost_of_Newspapers = 0;
+            decimal Total_Lost_Profit_from_Excess_Demand = 0;
+            decimal Total_Salvage_from_sale_of_Scrap_papers = 0;
+            decimal Net_Profit = 0;
+            int Number_of_days_having_excess_demand = 0;
+            int Number_of_days_having_unsold_papers = 0;
+
+            foreach (SimulationCase Scase in SimulationTable)
             {
-                Console.WriteLine(Scase.DayNo.ToString() + ' ' + Scase.RandomNewsDayType.ToString() + ' ' + Scase.NewsDayType.ToString() + ' ' + Scase.RandomDemand.ToString() + ' ' + Scase.Demand.ToString() + ' ' +Scase.DailyCost.ToString() + ' '+Scase.SalesProfit.ToString() + ' '+Scase.LostProfit.ToString() + ' '+ Scase.ScrapProfit.ToString() + ' '+Scase.DailyNetProfit.ToString());
+                Total_Sales_Revenue += Scase.SalesProfit;
+                Total_Cost_of_Newspapers += Scase.DailyCost;
+                Total_Lost_Profit_from_Excess_Demand += Scase.LostProfit;
+                Total_Salvage_from_sale_of_Scrap_papers += Scase.ScrapProfit;
+                Net_Profit += Scase.DailyNetProfit;
+                if (Scase.LostProfit != 0)
+                {
+                    Number_of_days_having_excess_demand++;
+                }
+                if (Scase.ScrapProfit != 0)
+                {
+                    Number_of_days_having_unsold_papers++;
+                }
             }
+            PerformanceMeasures.TotalSalesProfit = Total_Sales_Revenue;
+            PerformanceMeasures.TotalCost = Total_Cost_of_Newspapers;
+            PerformanceMeasures.TotalLostProfit = Total_Lost_Profit_from_Excess_Demand;
+            PerformanceMeasures.TotalScrapProfit = Total_Salvage_from_sale_of_Scrap_papers;
+            PerformanceMeasures.TotalNetProfit = Net_Profit;
+            PerformanceMeasures.DaysWithMoreDemand =  Number_of_days_having_excess_demand;
+            PerformanceMeasures.DaysWithUnsoldPapers = Number_of_days_having_unsold_papers;
+            //Console.WriteLine("TotalSalesProfit :" + Total_Sales_Revenue);
+            //Console.WriteLine("TotalCost :" + Total_Cost_of_Newspapers);
+            //Console.WriteLine("TotalLostProfit :" + Total_Lost_Profit_from_Excess_Demand);
+            //Console.WriteLine("TotalScrapProfit :" + Total_Salvage_from_sale_of_Scrap_papers);
+            //Console.WriteLine("TotalNetProfit :" + Net_Profit);
+            //Console.WriteLine("DaysWithMoreDemand :" + Number_of_days_having_excess_demand);
+            //Console.WriteLine("DaysWithUnsoldPapers :" + Number_of_days_having_unsold_papers);
         }
         ///////////// INPUTS /////////////
         public int NumOfNewspapers { get; set; }

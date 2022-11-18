@@ -28,6 +28,7 @@ namespace NewspaperSellerSimulation
             //    Console.WriteLine();
             //}
             simulation.calculateSimulationTable();
+            simulation.calulate_proformance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
