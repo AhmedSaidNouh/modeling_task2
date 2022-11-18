@@ -181,7 +181,10 @@ namespace NewspaperSellerModels
                 }
                 raw.Demand = Demand;
                 raw.DailyCost = NumOfNewspapers * PurchasePrice;
-                raw.SalesProfit = Demand * SellingPrice;
+                if ((raw.Demand - NumOfNewspapers)>0)
+                    raw.SalesProfit = NumOfNewspapers * SellingPrice;
+                else
+                    raw.SalesProfit = Demand * SellingPrice;
                 raw.LostProfit = (raw.Demand - NumOfNewspapers) * (SellingPrice-PurchasePrice);
                 if (raw.LostProfit <= 0) raw.LostProfit = 0;
                 raw.ScrapProfit = (NumOfNewspapers - raw.Demand) * ScrapPrice;

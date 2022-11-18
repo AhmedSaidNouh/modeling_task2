@@ -16,7 +16,7 @@ namespace NewspaperSellerSimulation
         static void Main()
         { 
             NewspaperSellerModels.SimulationSystem simulation = new NewspaperSellerModels.SimulationSystem();
-            simulation.readFromFile("D:/TestCase1.txt", simulation);
+            simulation.readFromFile("D:/TestCase2.txt", simulation);
             //foreach (NewspaperSellerModels.DemandDistribution s in simulation.DemandDistributions)
             //{
                 
@@ -29,7 +29,7 @@ namespace NewspaperSellerSimulation
             //}
             simulation.calculateSimulationTable();
             simulation.calulate_proformance();
-            string x = TestingManager.Test(simulation, Constants.FileNames.TestCase1);
+            string x = TestingManager.Test(simulation, Constants.FileNames.TestCase2);
             MessageBox.Show(x);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
