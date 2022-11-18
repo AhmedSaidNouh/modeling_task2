@@ -29,10 +29,10 @@ namespace NewspaperSellerSimulation
         {
             if (test.SelectedItem != null)
             {
+                SimulationSystem simulation = new SimulationSystem();
                 string path = "../../TestCases/";
                 string Test = test.SelectedItem.ToString();
                 string final_path = path + Test;
-                SimulationSystem simulation = new SimulationSystem();
                 simulation.readFromFile(final_path, simulation);
                 simulation.calculateSimulationTable();
                 simulation.calulate_proformance();
@@ -50,8 +50,10 @@ namespace NewspaperSellerSimulation
                         break;
 
                 }
-                
+               
                 MessageBox.Show(x);
+                Form2 graphForm = new Form2(simulation);
+                graphForm.Show();
 
             }
             else
